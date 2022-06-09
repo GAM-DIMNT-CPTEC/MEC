@@ -1,0 +1,2 @@
+DT;HH;MOD;EVENT
+20190612;12;GFS_30km;Mudança na Física

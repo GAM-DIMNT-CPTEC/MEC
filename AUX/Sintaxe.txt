@@ -1,0 +1,26 @@
+ 
+Use:
+
+./00-MEC.ksh <eval_name> <var> <init_time> <valid_date1> <valid_date2> <regrid> <sp_domain>
+ 
+<eval_name>   A name for the evaluation, root directory of the main output directory, e.g. REG21 *** REQUIRED ***
+<var>         Variable name (appears on the GUI/plots), e.g. PREC | TP2M | ...
+<init_time>   Model's initialization time, e.g. 00 | 12
+<valid date1> Initial valid date, target of the forecast, in format YYYYMMDD
+<valid date2> Ending valid date, target of the forecast, in format YYYYMMDD
+<regrid>      Regridding mode:
+              . LOWEST       = Automatically chooses the lowest res grid between model x obs
+              . CTL filename = uses the CTL as regriding target, e.g. BAM_20km.ctl
+<sp_domain>   Spatial domain:
+              . MCD = Max Common Domain, auto gets the max area between model x obs
+              . LON1_LON2_LAT1_LAT2, e.g. 270_30_-50_10
+
+or
+
+./00-MEC.ksh <EVAL_NAME>
+
+<EVAL_NAME>   A name for the evaluation, root directory of the main output directory, e.g. REG21 *** REQUIRED ***
+
+The system will run <eval_name>/DefEvalCfg.ksh to setup the remaining env variables.
+
+

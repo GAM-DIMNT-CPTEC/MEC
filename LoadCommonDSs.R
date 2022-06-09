@@ -1,0 +1,6 @@
+stopifnot("MEC_D_deploy" %in% ls())
+load(paste0(MEC_D_deploy, "/DIR.RData"))
+load(paste0(MEC_D_deploy, "/CFG.RData"))
+load(paste0(MEC_D_deploy, "/REGIONS.RData"))
+load(paste0(MEC_D_deploy, "/METRICS.RData"))
+load(paste0(MEC_D_deploy, "/THRESHOLDS.RData"))

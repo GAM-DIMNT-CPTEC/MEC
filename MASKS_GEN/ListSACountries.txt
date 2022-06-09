@@ -1,0 +1,24 @@
+# ===============================================================================
+# Lista de paises da America do Sul que serão avaliados pelo MEC
+# Usado por CreateMaskFromNetCDF+Shape.R
+# Nomes devem estar de acordo com o reportado no shapefile que serão extraídos
+# Comentários devem ter "#" na coluna 1
+# ===============================================================================
+
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+#Falkland Islands
+#French Guiana
+#Guyana
+Paraguay
+Peru
+#Suriname
+Uruguay
+Venezuela
+
+# "Paises" ignorados: Aruba, Bonaire, Curaçao, Trinidad and Tobago
+
