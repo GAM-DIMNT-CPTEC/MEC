@@ -29,17 +29,17 @@ cp -R REG21T REG21T-test
 * `MEC_models`: nomes dos experimentos a serem avaliados (e.g., `BAM_20km`, `BRAMS_08km`, `Eta_08km`, `GFS_30km`, `WRF_07km`, `WRFG_07km`);
 * `MEC_models_cmp`: nome dos experimentos a serem considerados como referência (e.g., `BAM_20km`, `BRAMS_08km`, `Eta_08km`, `WRF_07km`);
 * `MEC_grid_res`: arquivo `ctl` com os parâmetros da grade a ser utilizada como padrão (verificar o diretório `TEMPLATE`);
-4. Ainda no diretório `MEC/REG21T-test`, revisar os seguintes parâmetros do script `00-EvalSetInit_run_once.ksh`:
+3. Ainda no diretório `MEC/REG21T-test`, revisar os seguintes parâmetros do script `00-EvalSetInit_run_once.ksh`:
 * `MEC_eval_name`: nome do experimento, no exemplo `REG21T-test`;
 * `MEC_ref_per`: período da avaliação no formato `YYYYMM`;
 * `MED_D_data`: local onde serão escritos os arquivos dos modelos e observações na etapa de pré-processamento, no exemplo `/algum/local/MEC_DATA`.
-5. Executar o script `00-EvalSetInit_run_once.ksh`. Este script criará o diretório `/algum/local/MEC_DATA` e copiará os arquivos necessários para a etapa de pré-processamento do MEC:
+4. Executar o script `00-EvalSetInit_run_once.ksh`. Este script criará o diretório `/algum/local/MEC_DATA` e copiará os arquivos necessários para a etapa de pré-processamento do MEC:
 
 ```
 ./00-EvalSetInit_run_once.ksh
 ```
 
-6. No diretório `MEC/CONFIG`, revisar os caminhos e as datas de avaliação dos modelos (e.g., o script `BAM_20km.ksh`, caso apenas o modelo BAM 20 km seja considerado na avaliação). Revisar os seguintes parâmetros:
+5. No diretório `MEC/CONFIG`, revisar os caminhos e as datas de avaliação dos modelos (e.g., o script `BAM_20km.ksh`, caso apenas o modelo BAM 20 km seja considerado na avaliação). Revisar os seguintes parâmetros:
 * `MEC_ctl_full_path_model`: diretório onde se encontram os arquivos brutos do modelo (e.g., `/oper/share/ioper/tempo/BAM/TQ0666L064/brutos/YYYY/MM/DD/00` para o modelo BAM 20 km);
 * `MEC_ctl_full_fname_model`: nome completo do arquivo `ctl` template do modelo (e.g., `${MEC_ctl_full_path_model}/GPOSNMCYYYYMMDD00P.fct.TQ0666L064.ctl` para o modelo BAM 20 km).
 
