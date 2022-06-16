@@ -1,0 +1,2 @@
+'open CTL'
+'d prec'

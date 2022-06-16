@@ -1,0 +1,6 @@
+'open CTL_MERGE' 
+'set lon LON'
+'set lat LAT'
+'FCTNEW=prec(t=1)'
+'./GS_g2grb_prec FCTNEW DIR_OUT/OBS_NEW.grib2 d=dt_obs:PREC:surface:anl'
+'quit'

@@ -1,0 +1,1 @@
+https://geonode.paranagua.pr.gov.br/geoserver/ows?access_token=None?outputFormat=SHAPE-ZIP&service=WFS&srs=EPSG%3A4674&request=GetFeature&format_options=charset%3AUTF-8&typename=geonode%3Aa__031_001_americaDoSul&version=1.0.0

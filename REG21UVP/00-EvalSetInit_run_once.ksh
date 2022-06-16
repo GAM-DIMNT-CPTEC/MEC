@@ -62,6 +62,7 @@ cp ${MEC_D_grads}/g2ctl            ${MEC_D_temp}
 cp ${MEC_D_grads}/template.grb2    ${MEC_D_temp}
 cp ${MEC_D_mec}/TEMPLATE/*         ${MEC_D_templ}
 cp ${MEC_D_mec}/MASKS/*            ${MEC_D_masks}
+cp ${MEC_D_grads}/wgrib2           ${MEC_D_temp}
 
 set | grep "^MEC_" > EVAL_SET.ksh
 
