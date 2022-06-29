@@ -107,7 +107,7 @@ echo "SP DOMAIN: ${MEC_sp_domain}   OBS: ${MEC_obs}"
 echo "================================================================================"
 echo
 
-#./03-Eval.ksh ${MEC_eval_name} ${MEC_eval_mode}
+./03-Eval.ksh ${MEC_eval_name} ${MEC_var} ${MEC_init_time} ${MEC_eval_mode}
 
 # Deploy the application at https://garcia-cptec.shinyapps.io/CPTEC_DAILY/
 #./08-Deploy.ksh

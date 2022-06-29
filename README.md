@@ -10,6 +10,16 @@ Para realizar uma cópia do MEC, utilize o comando a seguir, ou clique no botão
 gh repo clone GAM-DIMNT-CPTEC/MEC
 ```
 
+## Pré-requisitos
+
+O MEC utiliza pacotes diferentes para a etapa de pré-processamento, cálculo das estatísticas e plotagem das figuras. Para a instalação destes pacotes, recomenda-se a utilização do Anaconda para a criação de um ambiente específico para o MEC.
+
+Com o Anaconda instalado na máquina, utilize o arquivo `MEC.yml` para criar o ambiente:
+
+```
+conda env create -f MEC.yml
+```
+
 ## Configuração
 
 1. Dentro do diretório `MEC`, criar um diretótio para o experimento, e.g., `REG21T-test` ou copiar um dos diretórios `REG21`, `REG21T` ou `REG21UVP`:
@@ -39,9 +49,23 @@ cp -R REG21T REG21T-test
 ./00-EvalSetInit_run_once.ksh
 ```
 
-5. No diretório `MEC/CONFIG`, revisar os caminhos e as datas de avaliação dos modelos (e.g., o script `BAM_20km.ksh`, caso apenas o modelo BAM 20 km seja considerado na avaliação). Revisar os seguintes parâmetros:
+5. Ainda no diretório `MEC/REG21T-test`, revise os scripts `01-CFG_Main.R`, `03-CFG_SET_TMAX_SAMeT.R` e `04-CFG_SET_TMIN_SAMeT.R`. Observe que os scripts `03-CFG_SET_TMAX_SAMeT.R` e `04-CFG_SET_TMIN_SAMeT.R` referem-se à variável que será avaliada. Execute os scripts utilizando os comandos:
+
+```
+Rscript 01-CFG_Main.R
+Rscript 04-CFG_SET_TMIN_SAMeT.R
+```
+
+e também o script `03-CFG_SET_TMAX_SAMeT.R`, caso a variável `TMAX` também seja considerada na avaliação:
+
+```
+Rscript 03-CFG_SET_TMAX_SAMeT.R
+```
+
+6. No diretório `MEC/CONFIG`, revisar os caminhos e as datas de avaliação dos modelos (e.g., o script `BAM_20km.ksh`, caso apenas o modelo BAM 20 km seja considerado na avaliação). Revisar os seguintes parâmetros:
 * `MEC_ctl_full_path_model`: diretório onde se encontram os arquivos brutos do modelo (e.g., `/oper/share/ioper/tempo/BAM/TQ0666L064/brutos/YYYY/MM/DD/00` para o modelo BAM 20 km);
 * `MEC_ctl_full_fname_model`: nome completo do arquivo `ctl` template do modelo (e.g., `${MEC_ctl_full_path_model}/GPOSNMCYYYYMMDD00P.fct.TQ0666L064.ctl` para o modelo BAM 20 km).
+7. No diretório `MEC/`, revise o diretórios do script `03-Eval.ksh`.
 
 ## Uso
 
@@ -80,3 +104,5 @@ Como exemplo, para relizar o MEC, para uma avaliação curta (apenas para o dia 
 ```
 ./00-MEC.ksh REG21T-test TMIN 00 20220601 20220601 MERGE_10.ctl MCD
 ```
+
+Ao final da execução do script `00-MEC.ksh`, serão criados os arquivos binários prontos para a plotagem dos resultados das avaliações.
