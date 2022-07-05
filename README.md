@@ -170,7 +170,8 @@ A partir da utilização do script `00-MEC.ksh`, as etapas de pré-processamento
 
 1. Entre no diretório `MEC/MECInterface`, edite o arquivo `AUX-CURRENT_EVAL.txt` com o nome do experimento realizado: `REG21T-test`;
 2. Ainda no diretório `MEC/MECInterface`, crie um diretório com o nome do experimento `REG21T-test`;
-3. Execute o script `runMECInterface.R` dentro do diretório `MEC/MECInterface`:
+3. Copie o conteúdo do diretório `/algum/local/MEC_DATA/REG21T-test/DEPLOY/` para dentro do diretório criado no passo anterior (`MEC/MECInterface/REG21T-test/`);
+4. Execute o script `runMECInterface.R` dentro do diretório `MEC/MECInterface`:
 
     ```
     Rscript runMECInterface.R
