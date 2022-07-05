@@ -1,0 +1,6 @@
+library(rsconnect)
+setwd('../MEC-DEPLOY/')
+EVAL <- readLines('AUX-CURRENT_EVAL.txt')
+cat('* DEPLOYING APPLICATION:', EVAL, '\n')
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+deployApp(appName = EVAL)

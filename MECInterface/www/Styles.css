@@ -1,0 +1,206 @@
+/*
+
+# Sintaxe: 
+SELETOR {
+  PROPRIEDADE1: VALOR1;
+  PROPRIEDADE2: VALOR2;
+  ...
+}
+
+tag{}       # Define estilo para todos os tags do HTML (header, body, h1, p, span, div, ...)
+.my-class{} # Cria um estilo (uma classe) e nomeia como "my-class"
+            # Usar o nome da classe criada no atributo classe="my-class" nos tags 
+            # Dentro das aspas, não precisa usar o ponto (.)
+            # +1 classe por tag, exemplo class="my-class1 my-class2"
+           
+#my-id{}    # Cria estilo para tag com o a atributo id="my-id" nos tags (só um por tag)
+            # Dentro das aspas, não precisa usar o hashtag (#)
+
+
+.mycheckbox {
+  margin-top:0px;
+  display:inline-block; 
+  border:1px solid; 
+  margin:-14px; 
+  height:20px; 
+  vertical-align:top; 
+  color:white;
+}
+ 
+# atua em TODOS os botões radio
+.radio {
+  margin:0px;
+}
+
+#dayPlotId {
+  display:inline-block; 
+  vertical-align:top; 
+  padding:50px; 
+  height:50px; 
+  line-height:50px; 
+}
+*/
+
+/* Primeira linha do select DE TODOS OS selectInput() */
+/* #dayPlotId ****** NÃO RECONHECE ESTE COMPONENTE PELO ID ?????? ***** */ 
+/*
+.selectize-input {
+  padding:0 0 0 4px;
+  margin:0;
+  line-height:20px;
+  min-height:20px;
+  height:20px;
+}
+*/
+
+/* Opções que aparecem ao clicar na setinha pra baixo - DE TODOS OS selectInput()
+.selectize-dropdown { 
+  /* line-height: 15px; 
+  padding:2px;
+  margin:0;
+}
+*/
+
+/* style for model names at the sidebar
+#modId > div > div:nth-child(1) { 
+  width: 200px; /*Desired width
+}*/
+
+/* coluna lead tima do score card */
+.col_lt {
+  font-size:small;
+}
+
+.TabHelp td {
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+
+.TabSummMetric th {
+  color:#0000FF;
+  background-color:#FFFFFF;
+}
+.TabSummMetric td {
+  color:black;
+}
+.TabSummMetric th, .TabSummMetric td {
+  text-align:center; 
+  border:2px solid blue; 
+  border-collapse:collapse;
+}
+
+/* Controles */
+.ctrl-compo {
+  display:inline-block; 
+  vertical-align:top; 
+  border:0 solid; 
+}
+
+.main-header .logo {
+  font-family: "Georgia", Times, "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Full lines of controls*/
+.compo-line {
+  vertical-align:top; 
+  border:0 solid; 
+  /*color:white;*/
+  /*background-color:#4D4D4D;*/
+  height:auto;
+}
+
+/* texto que vai na linha de controle */
+.line-text {
+  display:inline-block; 
+  border:0px solid blue; 
+}
+.line-text-in-panel {
+  display:inline-block; 
+  border:0px solid blue; 
+  margin:8px 0px 0px 0px;
+}
+
+/* Objeto uioutput ou componente que vai na linha de controle */
+.line-compo {
+  display:inline-block; 
+  border:0px solid red; 
+  /*padding:0px 0px 0px 0px;*/ 
+  vertical-align:middle; 
+  height:35px;
+}
+.line-compo-sml {
+  display:inline-block; 
+  border:0px solid red; 
+  margin:6px 0px 0px 0px;
+  height:20px;
+}
+
+
+/* Conditional panel que vai na linha amarela */
+.line-cond-panel {
+  display:inline-block;
+  margin:0px auto;
+  border:0px solid green; 
+  height:35px; 
+  vertical-align:middle;
+}
+
+/* Conditional panel do painel de controle */
+.ctrl-cond-panel {
+  display:inline-block; 
+  vertical-align:top; 
+  border:0 solid; 
+}
+
+.ctrl-compo {
+  display:inline-block;
+  vertical-align:top; 
+  border:0 solid; 
+}
+
+/* Espaço default que vai entre os componentes */
+.def-gap {
+  display:inline-block; 
+  width:10px; 
+  border:0 solid; 
+  vertical-align:top
+}
+
+.minor-gap {
+  display:inline-block; 
+  width:5px; 
+  border:0 solid; 
+  vertical-align:top
+}
+
+/* Action button */
+.action-button-color {
+  /*color: black; 
+  background-color: yellow; 
+  border-color: black;*/
+}
+
+.ctrl-title {
+  color: orange;
+}
+
+.action-button-def-dim {
+  display:inline-block; 
+  vertical-align:top; 
+  border:0 solid; 
+  width:20px; 
+  height:25px;
+  padding:0;
+  margin:0;
+}
+
+
+/* text input do numero de colunas a mostrar no ST */
+/* #ncolsContId, #anoMesBeg, #anoMesEnd{ */
+#ncolsContId {
+  height:18px
+}
+

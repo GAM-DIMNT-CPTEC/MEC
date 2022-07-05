@@ -1,0 +1,89 @@
+PC_Names: Percent Correct (PC) or Fraction Correct (FC) or Accuracy (Acc)
+PC_Answers: Overall, what fraction of the forecasts were correct?
+PC_Range: 0 to 1.  Perfect score: 1.
+PC_Characteristics: Simple, intuitive. Can be misleading since it is heavily influenced by the most common category, usually 'no event' in the case of rare weather.
+
+FBIAS_Names: Frequency Bias (FBIAS)
+FBIAS_Answers: How did the forecast frequency of 'yes' events compare to the observed frequency of 'yes' events?
+FBIAS_Range: 0 to ∞.  Perfect score: 1.
+FBIAS_Characteristics: Measures the ratio of the frequency of forecast events to the frequency of observed events. Indicates whether the forecast system has a tendency to underforecast (BIAS<1) or overforecast (BIAS>1) events. Does not measure how well the forecast corresponds to the observations, only measures relative frequencies.
+
+POD_Names: Probability of Detection (POD) or Hit Rate (H)
+POD_Answers: What fraction of the observed 'yes' events were correctly forecast?
+POD_Range: 0 to 1.  Perfect score: 1.
+POD_Characteristics: Sensitive to hits, but ignores false alarms. Very sensitive to the climatological frequency of the event. Good for rare events.Can be artificially improved by issuing more 'yes' forecasts to increase the number of hits. Should be used in conjunction with the false alarm ratio (below). POD is also an important component of the Relative Operating Characteristic (ROC) used widely for probabilistic forecasts.
+
+FAR_Names: False Alarm Ratio (FAR)
+FAR_Answers: What fraction of the predicted 'yes' events actually did not occur (i.e., were false alarms)?
+FAR_Range: 0 to 1.  Perfect score: 0.
+FAR_Characteristics: Sensitive to false alarms, but ignores misses. Very sensitive to the climatological frequency of the event. Should be used in conjunction with the probability of detection (above).
+
+POFD_Names: Probability of False Detection (POFD) or False Alarm Rate (F)
+POFD_Answers: What fraction of the observed 'no' events were incorrectly forecast as 'yes'?
+POFD_Range: 0 to 1.  Perfect score: 0.
+POFD_Characteristics: Sensitive to false alarms, but ignores misses. Can be artificially improved by issuing fewer 'yes' forecasts to reduce the number of false alarms. Not often reported for deterministic forecasts, but is an important component of the Relative Operating Characteristic (ROC) used widely for probabilistic forecasts.
+
+SR_Names: Success Ratio (SR)
+SR_Answers: What fraction of the forecast 'yes' events were correctly observed?
+SR_Range: 0 to 1.  Perfect score: 1.
+SR_Characteristics: Gives information about the likelihood of an observed event, given that it was forecast. It is sensitive to false alarms but ignores misses. SR is equal to 1-FAR. POD is plotted against SR in the categorical performance diagram.
+
+TS_Names: Threat Score (TS) or Critical Success Index CSI) 
+TS_Answers: How well did the forecast 'yes' events correspond to the observed 'yes' events?
+TS_Range: 0 to 1, 0 indicates no skill. Perfect score: 1.
+TS_Characteristics: Measures the fraction of observed and/or forecast events that were correctly predicted. It can be thought of as the accuracy when correct negatives have been removed from consideration, that is, TS is only concerned with forecasts that count. Sensitive to hits, penalizes both misses and false alarms. Does not distinguish source of forecast error. Depends on climatological frequency of events (poorer scores for rarer events) since some hits can occur purely due to random chance.
+
+ETS_Names: Equitable Threat Score (ETS) or Gilbert Skill Score (GSS) 
+ETS_Answers: How well did the forecast 'yes' events correspond to the observed 'yes' events (accounting for hits due to chance)?
+ETS_Range: -1/3 to 1, 0 indicates no skill.   Perfect score: 1.
+ETS_Characteristics: Measures the fraction of observed and/or forecast events that were correctly predicted, adjusted for hits associated with random chance (for example, it is easier to correctly forecast rain occurrence in a wet climate than in a dry climate). The ETS is often used in the verification of rainfall in NWP models because its 'equitability' allows scores to be compared more fairly across different regimes. Sensitive to hits. Because it penalises both misses and false alarms in the same way, it does not distinguish the source of forecast error.
+
+HK_Names: Hanssen and Kuipers discriminant (HK) or True Skill Statistic (TSS) or Peirce's Skill Score (PSS)
+HK_Answers: How well did the forecast separate the 'yes' events from the 'no' events?
+HK_Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
+HK_Characteristics: Uses all elements in contingency table. Does not depend on climatological event frequency. The expression is identical to HK = POD - POFD, but the Hanssen and Kuipers score can also be interpreted as (accuracy for events) + (accuracy for non-events) - 1. For rare events HK is unduly weighted toward the first term (same as POD), so this score may be more useful for more frequent events. Can be expressed in a form similar to the ETS except the hitsrandom term is unbiased. See Woodcock (1976) for a comparison of HK with other scores.
+
+HSS_Names: Heidke Skill Score (HSS)
+HSS_Answers: What was the accuracy of the forecast relative to that of random chance?
+HSS_Range: -1 to 1, 0 indicates no skill.  Perfect score: 1.
+HSS_Characteristics: Measures the fraction of correct forecasts after eliminating those forecasts which would be correct due purely to random chance. This is a form of the generalized skill score, where the score in the numerator is the number of correct forecasts, and the reference forecast in this case is random chance. In meteorology, at least, random chance is usually not the best forecast to compare to - it may be better to use climatology (long-term average value) or persistence (forecast = most recent observation, i.e., no change) or some other standard.
+
+OR_Names: Odds Ratio (OR)
+OR_Answers: What is the ratio of the odds of a 'yes' forecast being correct, to the odds of a 'yes' forecast being wrong?
+OR_Range: 0 to ∞, 1 indicates no skill. Perfect score: ∞
+OR_Characteristics: Measures the ratio of the odds of making a hit to the odds of making a false alarm. The logarithm of the odds ratio is often used instead of the original value. Takes prior probabilities into account. Gives better scores for rarer events. Less sensitive to hedging. Do not use if any of the cells in the contingency table are equal to 0.  Used widely in medicine but not yet in meteorology -- see Stephenson (2000) for more information. Note that the odds ratio is not the same as the ratio of the probability of making a hit (hits / # forecasts) to the probability of making a false alarm (false alarms / # forecasts), since both of those can depend on the climatological frequency (i.e., the prior probability) of the event.
+
+ORSS_Names: Odds Ratio Skill Score
+ORSS_Answers: What was the improvement of the forecast over random chance?
+ORSS_Range: -1 to 1, 0 indicates no skill. Perfect score: 1
+ORSS_Characteristics: Independent of the marginal totals (i.e., of the threshold chosen to separate 'yes' and 'no'), so is difficult to hedge. See Stephenson (2000) for more information.
+
+SS_Names: Skill Score
+SS_Answers: What is the relative skill of the probabilistic forecast over that of climatology, in terms of predicting whether or not an event occurred?
+SS_Range: -∞ to 1, 0 indicates no skill when compared to the reference forecast. Perfect score: 1.
+SS_Characteristics: Measures the improvement of the probabilistic forecast relative to a reference forecast (usually the long-term or sample climatology), thus taking climatological frequency into account. Not strictly proper. Unstable when applied to small data sets; the rarer the event, the larger the number of samples needed.
+
+COR_Names: Correlation coefficient or Spearman’s Rank correlation (r)
+COR_Answers: How well did the forecast values correspond to the observed values?
+COR_Range: -1 to 1.  Perfect score: 1.
+COR_Characteristics: Good measure of linear association or phase error. Visually, the correlation measures how close the points of a scatter plot are to a straight line. Does not take forecast bias into account -- it is possible for a forecast with large errors to still have a good correlation coefficient with the observations. Sensitive to outliers.
+
+BIAS_Names: Bias (additive) or Mean Error (ME)
+BIAS_Answers: What is the average forecast error?
+BIAS_Range: -∞ to ∞. Perfect score: 0.
+BIAS_Characteristics: Simple, familiar. Does not measure the magnitude of the errors. Does not measure the correspondence between forecasts and observations, i.e., it is possible to get a perfect score for a bad forecast if there are compensating errors.
+
+MAE_Names: Mean Absolute Error (MAE)
+MAE_Answers: What is the average magnitude of the forecast errors?
+MAE_Range: 0 to ∞.  Perfect score: 0.
+MAE_Characteristics: Simple, familiar. Does not indicate the direction of the deviations.
+
+RMSE_Names: Root Mean Square Error (RMSE)
+RMSE_Answers: What is the average magnitude of the forecast errors?
+RMSE_Range: 0 to ∞.  Perfect score: 0.
+RMSE_Characteristics: Simple, familiar. Measures "average" error, weighted according to the square of the error. Does not indicate the direction of the deviations. The RMSE puts greater influence on large errors than smaller errors, which may be a good things if large errors are especially undesirable, but may also encourage conservative forecasting.
+
+MSE_Names: Mean Squared Error (MSE)
+MSE_Answers: What is the mean squared difference between the forecasts and observations.
+MSE_Range: 0 to ∞.  Perfect score: 0.
+MSE_Characteristics: Can be decomposed into component error sources following Murphy (1987). Units of MSE are the square of the basic units.

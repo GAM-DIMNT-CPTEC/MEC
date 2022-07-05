@@ -1,0 +1,14 @@
+ColorCard.R
+FilterDS.R
+Functions.R
+HTML_ScoreCard01_Header.html
+PerformDiag.R
+Refresh.png
+ScoreCard_01.R
+www/Styles.css
+TaylorDiag.R
+Translations.csv
+global.R
+server.R
+ui.R
+SourceFiles2Deploy.txt
