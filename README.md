@@ -133,7 +133,7 @@ or
 The system will run <eval_name>/DefEvalCfg.ksh to setup the remaining env variables.
 ```
 
-Como exemplo, para relizar o MEC, para uma avaliação curta (apenas para o dia 20220601 às 00Z) da tempertura mínima (TMIN) do modelo BAM 20 km (configurado seguindo as instruções das seções anteriores), considerando o máximo domínio comum (MCD), utilize o comando a seguir:
+Como exemplo, para relizar o MEC, para uma avaliação curta (para o período de 20220601 a 20220605, às 00Z) da tempertura mínima (TMIN) do modelo BAM 20 km (configurado seguindo as instruções das seções anteriores), considerando o máximo domínio comum (MCD), utilize o comando a seguir:
 
 ```
 ./00-MEC.ksh REG21T-test TMIN 00 20220601 20220605 MERGE_10.ctl MCD
