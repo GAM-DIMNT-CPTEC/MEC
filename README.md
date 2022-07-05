@@ -20,6 +20,26 @@ Com o Anaconda instalado na máquina, utilize o arquivo `MEC.yml` para criar o a
 conda env create -f MEC.yml
 ```
 
+Além dos pacotes do R instalados no ambiente `MEC-test` (criado na etapa anterior), é necessário instalar também o pacote `dashboardthemes`. Para isso, siga as instruções a seguir:
+
+1. Ative o ambiente `MEC-test`:
+  
+    ```
+    conda activate MEC-test
+    ```
+
+    **Nota:** Caso o MEC esteja sendo executado dentro da máquina Itepemirim, o ambiente `MEC-test` poderá ser ativado com o comando `source /caminho/instalacao/do/conda/envs/MEC-test/bin/activate`.
+
+
+2. Abra o prompt do `R` e instale o pacote:
+
+    ```
+    R
+    install.packages("dashboardthemes")
+    ```
+
+3. Selecione o mirror mais próximo da sua localização geográfica e aguarde o processo terminar.
+
 ## Configuração
 
 Antes de iniciar o processo de configuração do MEC, ative o ambiente `MEC-test` criado na etapa anterior:
@@ -27,8 +47,6 @@ Antes de iniciar o processo de configuração do MEC, ative o ambiente `MEC-test
 ```
 conda activate MEC-test
 ```
-
-**Nota:** Caso o MEC esteja sendo executado dentro da máquina Itepemirim, o ambiente `MEC-test` poderá ser ativado com o comando `source /caminho/instalacao/do/conda/envs/MEC-test/bin/activate`.
 
 Para configurar o MEC, siga as instruções a seguir.
 
@@ -155,5 +173,5 @@ A partir da utilização do script `00-MEC.ksh`, as etapas de pré-processamento
 3. Execute o script `runMECInterface.R` dentro do diretório `MEC/MECInterface`:
 
     ```
-    Rscript runMECInterface.R`
+    Rscript runMECInterface.R
     ```
