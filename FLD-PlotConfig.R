@@ -9,7 +9,7 @@ suppressMessages(library(maptools))       # for readShapeSpatial()
 suppressMessages(library(maps))           # for map()
 suppressMessages(library(RColorBrewer))
 suppressMessages(library(viridis))
-suppressWarnings(SHP_BR_REG <- readShapeSpatial(paste0(DIR$shp, '/BR/regioes/regioes_2010.shp')))
+suppressWarnings(SHP_BR_REG <- readShapeSpatial(paste0(DIR$shp, '/BRA/regioes/regioes_2010.shp')))
 
 source("FunColors.R")
 
