@@ -133,6 +133,8 @@ or
 The system will run <eval_name>/DefEvalCfg.ksh to setup the remaining env variables.
 ```
 
+**Nota:** Dentro do script `00-MEC.ksh` há a variável `MEC_eval_mode` que define se os intervalos de confiança das avaliações será calculado. Na revisão atual, esta variável está ajustada como `MEC_eval_mode=1`, ou seja, para apenas calcular as estatísticas sem os intervalos de confiança. Vide o referido script para outras opções.
+
 Como exemplo, para relizar o MEC, para uma avaliação curta (para o período de 20220601 a 20220605, às 00Z) da tempertura mínima (TMIN) do modelo BAM 20 km (configurado seguindo as instruções das seções anteriores), considerando o máximo domínio comum (MCD), utilize o comando a seguir:
 
 ```
