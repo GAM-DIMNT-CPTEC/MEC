@@ -107,7 +107,11 @@ echo "SP DOMAIN: ${MEC_sp_domain}   OBS: ${MEC_obs}"
 echo "================================================================================"
 echo
 
+export MEC_eval_mode=1 # confidence interval: 1=eval only (no confidence interval), 2=eval & CI, 3=CI only
+
 ./03-Eval.ksh ${MEC_eval_name} ${MEC_var} ${MEC_init_time} ${MEC_eval_mode}
+
+./05-Plot.ksh ${MEC_eval_name} ${MEC_var} ${MEC_init_time} ${MEC_eval_mode}
 
 # Deploy the application at https://garcia-cptec.shinyapps.io/CPTEC_DAILY/
 #./08-Deploy.ksh
